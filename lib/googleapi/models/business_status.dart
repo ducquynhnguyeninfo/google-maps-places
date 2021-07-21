@@ -1,0 +1,1 @@
+enum BusinessStatus { OPERATIONAL, SUSPENDED }
