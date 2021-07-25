@@ -8,7 +8,6 @@ import 'package:google_maps_webservice/places.dart';
 import 'package:places/config/dependency_injection.dart';
 import 'package:places/core/error/failures.dart';
 import 'package:places/features/places/data/datasources/remote_api/models/place_viewmodel.dart';
-import 'package:places/features/places/domain/entities/entities.dart';
 import 'package:places/features/places/domain/usecases/get_distance_usecase.dart';
 import 'package:places/features/places/domain/usecases/get_near_places_usecase.dart';
 import 'package:places/utils/location_helper.dart';

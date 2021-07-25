@@ -5,7 +5,6 @@ import 'package:google_maps_webservice/places.dart';
 import 'package:places/config/dependency_injection.dart';
 import 'package:places/features/places/data/datasources/remote_api/models/place_viewmodel.dart';
 import 'package:places/values/size_config.dart';
-import 'package:places/features/places/domain/entities/entities.dart';
 import 'package:places/features/places/presentation/screens/places_list/bloc/places_list_bloc.dart';
 import 'package:places/features/places/presentation/screens/places_list/components/list_item_view.dart';
 import 'package:places/features/places/presentation/screens/places_list/components/list_item_view_shimmer.dart';
@@ -81,9 +80,8 @@ class _HomePageState extends State<HomePage> {
 
   void _loadCafes(BuildContext ctx) async {
     print('load count: ${++loadTime}');
-    // context.read<PlacesListBloc>().add(GetNearPlacesEvent(PlaceType.cafe));
     BlocProvider.of<PlacesListBloc>(ctx)
-        .add(GetNearPlacesEvent(PlaceType.cafe));
+        .add(GetNearPlacesEvent('cafe'));
   }
 
   Widget _buildInitUI() {

@@ -8,7 +8,7 @@ abstract class PlacesListEvent extends Equatable {
 
 class GetNearPlacesEvent extends PlacesListEvent {
 
-  final PlaceType placeType;
+  final String placeType;
 
   GetNearPlacesEvent(this.placeType);
 
