@@ -1,0 +1,973 @@
+{
+  "html_attributions": [],
+  "next_page_token": "Aap_uEAYCpZxBia9Xl6xjURZvwwFh8_wPWbrAHhN8wDYhAEa1MPV4cOanFCZTDPPPiWi0izrS74x0rV_Of3YUsK3o8pdasDtSnUDP3wraWrm2SRa3jch1u3JEBDokoZW6aZYVwJA0v_NAoiLE6q1PpyIGJs-60lz3-57rinhVb7WEcki1Hj-DhSWZM96jMcUBJMtgvyiyfA1NpTrpwcbJBNYGQ8o4x_troHSeLAyQkXU_mvJ5Jj4CLJF-sv7wSdLa4LfqSb6zpmahMMJL2SriXyS-cM5rRNlrDrdkFwP5x2QKMt2o1HTU_F8I1bF9tJUmDIrpykishIQkp3gseCtdW6smUC7AWOXtQs_b1EzRtL_yCCPRkgODbGZO4Wu1poX-_lNt4I",
+  "results": [
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "AH1, Bình Minh, Trảng Bom, Đồng Nai, Vietnam",
+      "geometry": {
+        "location": {
+          "lat": 10.9517794,
+          "lng": 106.9725704
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 10.95314852989272,
+            "lng": 106.9739383298927
+          },
+          "southwest": {
+            "lat": 10.95044887010728,
+            "lng": 106.9712386701073
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/cafe-71.png",
+      "name": "Coffee Truć Thuỷ",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 4000,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/110403635863855826514\">Ngao TV</a>"
+          ],
+          "photo_reference": "Aap_uECw3y9Cb88C2dAvgBKa0zcXrUIX6pr-Xuo2xAZ5qk6AOjjofILyoKXmyGbm8g9wnFK6nbgaAPBdVlt8bAOTMISvZyYyBiDvai4l_Ws4D4JWrKsp3o-tkjCs9SHGC2UAZseNCa3_RKBWtATaC-PtRXP2GomQTbFzMT1PkKnXrIaaqeuP",
+          "width": 3000
+        }
+      ],
+      "place_id": "ChIJAQAAl83mdDER3HI26SJkZs4",
+      "plus_code": {
+        "compound_code": "XX2F+P2 Trảng Bom District, Dong Nai",
+        "global_code": "7P28XX2F+P2"
+      },
+      "price_level": 1,
+      "rating": 3.9,
+      "reference": "ChIJAQAAl83mdDER3HI26SJkZs4",
+      "types": [
+        "cafe",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 17
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "91B, Bình Minh, Quảng Tiến, Trảng Bom, Đồng Nai, Vietnam",
+      "geometry": {
+        "location": {
+          "lat": 10.9424689,
+          "lng": 106.9811234
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 10.94381262989272,
+            "lng": 106.9824385798927
+          },
+          "southwest": {
+            "lat": 10.94111297010728,
+            "lng": 106.9797389201073
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/cafe-71.png",
+      "name": "Viva coffee koi",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 960,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/114730091681420732004\">A Google User</a>"
+          ],
+          "photo_reference": "Aap_uEC2fcUEpriGjyKrY5X-CIs_GHmCZSBuCA1IoKArsRfA077Nhdx7sLLuXkwMakahlM_22o4o-2bO1g_C_n59m7fX3RP49d9gKqmv0-ScjzutWh-G26NuELJ6yfTFP7gfkk1ODCGyk2LKplOIYFBaQDmb9iN0h6FCbgdYipUFDSwBxubN",
+          "width": 720
+        }
+      ],
+      "place_id": "ChIJP3DsI4bhdDERg1evV4U-5bE",
+      "plus_code": {
+        "compound_code": "WXRJ+XC Trảng Bom District, Dong Nai",
+        "global_code": "7P28WXRJ+XC"
+      },
+      "price_level": 2,
+      "rating": 4.3,
+      "reference": "ChIJP3DsI4bhdDERg1evV4U-5bE",
+      "types": [
+        "cafe",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 79
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "Bắc Sơn, Trảng Bom District, Dong Nai, Vietnam",
+      "geometry": {
+        "location": {
+          "lat": 10.9593614,
+          "lng": 106.9543592
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 10.96074672989272,
+            "lng": 106.9557253798927
+          },
+          "southwest": {
+            "lat": 10.95804707010728,
+            "lng": 106.9530257201073
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/cafe-71.png",
+      "name": "CAFE RỪNG",
+      "photos": [
+        {
+          "height": 4160,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/113148156712332645472\">duc minh nguyen</a>"
+          ],
+          "photo_reference": "Aap_uEC51PjUs3oQJGZXirr3-H1cmQDlaqoeiUG_8jQTn1O-yi8q7FZDcVONJobgP69cjgqRuXDf0FinkGGtLfIyAbJ0ka9NIFFykSlloBsM4f5MGzmk_KJieKo_x6TCNKcdSGo6HJ0lic1DAvCldF2T3TlnFXaweWBKFsMEWmkA-AYajK0I",
+          "width": 3120
+        }
+      ],
+      "place_id": "ChIJJ0fKuyjndDERxUrw5noM7aA",
+      "plus_code": {
+        "compound_code": "XX53+PP Trảng Bom District, Dong Nai",
+        "global_code": "7P28XX53+PP"
+      },
+      "rating": 4.4,
+      "reference": "ChIJJ0fKuyjndDERxUrw5noM7aA",
+      "types": [
+        "cafe",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 17
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "AH1, Bắc Sơn, Trảng Bom, Đồng Nai, Vietnam",
+      "geometry": {
+        "location": {
+          "lat": 10.9599672,
+          "lng": 106.9522051
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 10.96138077989272,
+            "lng": 106.9535596298927
+          },
+          "southwest": {
+            "lat": 10.95868112010728,
+            "lng": 106.9508599701073
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/cafe-71.png",
+      "name": "HORSE COFFEE",
+      "photos": [
+        {
+          "height": 444,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/109261613769342460327\">A Google User</a>"
+          ],
+          "photo_reference": "Aap_uEBmBZwYtYnvxMsswyl60iv8Khu79xb6vyURGgbLek2ecSNTx3EvEXXTQIyZLq5SrivUeg4-zdaNz96bMOV6rP9i3d40qZJIQ232EYdI8HuC-sLLxaktx0xl2x2jqD6cL09mgTBRCbfG5TCCMgyVwQ4rOuj5r_Kv1KdcQp7WeQrVvXrx",
+          "width": 719
+        }
+      ],
+      "place_id": "ChIJmTdFQzDndDERGBNtrlvuYwQ",
+      "plus_code": {
+        "compound_code": "XX52+XV Trảng Bom District, Dong Nai",
+        "global_code": "7P28XX52+XV"
+      },
+      "rating": 4.3,
+      "reference": "ChIJmTdFQzDndDERGBNtrlvuYwQ",
+      "types": [
+        "cafe",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 28
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "15 QL1A, Bắc Sơn, Trảng Bom, Đồng Nai, Vietnam",
+      "geometry": {
+        "location": {
+          "lat": 10.9593924,
+          "lng": 106.9551258
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 10.96063847989272,
+            "lng": 106.9564037298927
+          },
+          "southwest": {
+            "lat": 10.95793882010728,
+            "lng": 106.9537040701073
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/cafe-71.png",
+      "name": "Cafe VIBES",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 4160,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/111962250412351070694\">Truyen Pham</a>"
+          ],
+          "photo_reference": "Aap_uEAhGSa5wpESgQv16ODtxMBzToFhZjtJZvxJWMqd6fICgIsP4ee2lRj-1Ynhhc2TpMmRLOvqA8YQQbh5wq6ZnfxYKuHNoKa0hvmWJIa1nsqtrxwDdfbsvLBaKu4QAzxQuA7cU8N_EUE9D4clh6L4hdALqN9Yb3Pa7gNd33BZXfnFd14q",
+          "width": 2368
+        }
+      ],
+      "place_id": "ChIJixf0lyjndDERkFCIOsKmCt8",
+      "plus_code": {
+        "compound_code": "XX54+Q3 Trảng Bom District, Dong Nai",
+        "global_code": "7P28XX54+Q3"
+      },
+      "price_level": 2,
+      "rating": 4,
+      "reference": "ChIJixf0lyjndDERkFCIOsKmCt8",
+      "types": [
+        "cafe",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 114
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "Bắc Sơn, Trảng Bom District, Dong Nai, Vietnam",
+      "geometry": {
+        "location": {
+          "lat": 10.9436397,
+          "lng": 106.9506696
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 10.94497867989272,
+            "lng": 106.9520502798927
+          },
+          "southwest": {
+            "lat": 10.94227902010728,
+            "lng": 106.9493506201073
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/cafe-71.png",
+      "name": "Cafe Thuy Nga",
+      "photos": [
+        {
+          "height": 4160,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/112767243213039223496\">Phuong cuc</a>"
+          ],
+          "photo_reference": "Aap_uEAsZok6qp_Zt6K-ez1H8LHQ9ovoZklQhk-TLCupTLO8wmHW9SgE2OrrL7lyypeMJJdrbIsNrKii8OxvDO7WBGL3LpQUwEZMs1Zo6J91dswumPuzfCR1TIZfp_q5k2Am4sMPEbdouOdS7-2cnQuRs8xOuiKqFYGbYUDjpD1FfmrSIrAA",
+          "width": 3120
+        }
+      ],
+      "place_id": "ChIJhyKyeNHgdDERHzlyMTk8gR8",
+      "rating": 3.9,
+      "reference": "ChIJhyKyeNHgdDERHzlyMTk8gR8",
+      "types": [
+        "cafe",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 15
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "39 Bình Minh, Quảng Tiến, Trảng Bom, Đồng Nai, Vietnam",
+      "geometry": {
+        "location": {
+          "lat": 10.9449109,
+          "lng": 106.9810418
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 10.94626042989272,
+            "lng": 106.9823595298927
+          },
+          "southwest": {
+            "lat": 10.94356077010728,
+            "lng": 106.9796598701073
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/cafe-71.png",
+      "name": "Cafe Miss Hòa",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 1920,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/115148077831877095675\">Nguyen Thinh</a>"
+          ],
+          "photo_reference": "Aap_uEDmJ2GOPRxW5HV0YehMTpKBnMdKt9XrRKchlUXEM7jE-xHo39H_hHff-s7pNodxy32_gQv22ZBM_Lxss0jmPC6WwXKPjHrQsPdJn3I1_iVXXpanw9DiVbOis63DupdyMHSqIhgjpvisFklL81mltTk-WKdnX1yYtLzCSyS_NdHdERAe",
+          "width": 1080
+        }
+      ],
+      "place_id": "ChIJf6YNsbPhdDERHB6g99MiLLU",
+      "plus_code": {
+        "compound_code": "WXVJ+XC Trảng Bom District, Dong Nai",
+        "global_code": "7P28WXVJ+XC"
+      },
+      "rating": 5,
+      "reference": "ChIJf6YNsbPhdDERHB6g99MiLLU",
+      "types": [
+        "cafe",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 3
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "C36, Hố Nai 3, Trảng Bom, Đồng Nai, Vietnam",
+      "geometry": {
+        "location": {
+          "lat": 10.9566562,
+          "lng": 106.9460546
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 10.95797017989272,
+            "lng": 106.9473830298927
+          },
+          "southwest": {
+            "lat": 10.95527052010728,
+            "lng": 106.9446833701073
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/cafe-71.png",
+      "name": "Koi Coffee Garden",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 3024,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/111906006791259619196\">Vernon Scott</a>"
+          ],
+          "photo_reference": "Aap_uECnqbCbRPX6xSoLUR4X8Dp0tVhGIlHQIPUo6pH5_yBGQmUOTL-4PEu9_SHzvR7cIKYZ-S-s-t6BruD_CeJ0Wo60xVlNNhe-9LoeRmNlgKU3Hnjenhu2LXoka06u9hQMB4ptVnwglAbT0iAC58qOr4UAwx1i6gzKe9EN1Ea2A5uoa4nB",
+          "width": 4032
+        }
+      ],
+      "place_id": "ChIJhQawvzHndDERwzDOB5NtPJY",
+      "plus_code": {
+        "compound_code": "XW4W+MC Trảng Bom District, Dong Nai",
+        "global_code": "7P28XW4W+MC"
+      },
+      "price_level": 2,
+      "rating": 4,
+      "reference": "ChIJhQawvzHndDERwzDOB5NtPJY",
+      "types": [
+        "cafe",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 297
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "22/2 QL1A, Ấp Thanh Hóa, Trảng Bom, Đồng Nai, Vietnam",
+      "geometry": {
+        "location": {
+          "lat": 10.9611119,
+          "lng": 106.9462733
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 10.96249757989272,
+            "lng": 106.9476341298927
+          },
+          "southwest": {
+            "lat": 10.95979792010728,
+            "lng": 106.9449344701073
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/cafe-71.png",
+      "name": "Tigôn Coffee",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 2436,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/109661383605267829902\">A Google User</a>"
+          ],
+          "photo_reference": "Aap_uECDJKIEFBmc-VxVVHIXq7ddwG-1TxvJdHzPxBE-ivHB-DGKpdKJ0-cl3zC9s5xEImHTXRuKNi_K08ydU0qkC22OuFv4YzmYLM8nT7EsO3b3d8vfw7YXwiu40PWYo-qavO4_LJ1-FoUsZcrP1Pz__5VeVBjyVGV-wENG9Oxl6U730z3U",
+          "width": 1125
+        }
+      ],
+      "place_id": "ChIJ--ZUojrndDEREAfeyGtH_ak",
+      "plus_code": {
+        "compound_code": "XW6W+CG Trảng Bom District, Dong Nai",
+        "global_code": "7P28XW6W+CG"
+      },
+      "price_level": 2,
+      "rating": 4,
+      "reference": "ChIJ--ZUojrndDEREAfeyGtH_ak",
+      "types": [
+        "cafe",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 218
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "195 Phú sơn, Bắc Sơn, Trảng Bom, Đồng Nai, Vietnam",
+      "geometry": {
+        "location": {
+          "lat": 10.9382431,
+          "lng": 106.9486553
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 10.93960927989272,
+            "lng": 106.9499631298927
+          },
+          "southwest": {
+            "lat": 10.93690962010728,
+            "lng": 106.9472634701073
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/cafe-71.png",
+      "name": "King Coffee",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 4032,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/113148156712332645472\">duc minh nguyen</a>"
+          ],
+          "photo_reference": "Aap_uEAem_TFy2tzN8N5B33r7M5xhui0HCF2_vXVEC3IQyHMnFIKCLdQybd4ptB5q90FSAe3s8J34WniWQmu7UP5jrKgYXrueE1L2cMs_aJkm8h5f3_iHnaiObyc-HPbuCCoumu33K4T2aAiKZ6Dup57AkW19RyTfCgXTCWSjgFHujqKmjMo",
+          "width": 3024
+        }
+      ],
+      "place_id": "ChIJedMFXQvhdDEROY47NC1_0UE",
+      "plus_code": {
+        "compound_code": "WWQX+7F Trảng Bom District, Dong Nai",
+        "global_code": "7P28WWQX+7F"
+      },
+      "rating": 4.5,
+      "reference": "ChIJedMFXQvhdDEROY47NC1_0UE",
+      "types": [
+        "cafe",
+        "food",
+        "point_of_interest",
+        "store",
+        "establishment"
+      ],
+      "user_ratings_total": 71
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "Bắc Sơn, Trảng Bom District, Dong Nai, Vietnam",
+      "geometry": {
+        "location": {
+          "lat": 10.9579131,
+          "lng": 106.9469479
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 10.95930782989272,
+            "lng": 106.9481959298927
+          },
+          "southwest": {
+            "lat": 10.95660817010728,
+            "lng": 106.9454962701073
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/cafe-71.png",
+      "name": "Amino 3D Cafe",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 3072,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/108283275119961677555\">A Google User</a>"
+          ],
+          "photo_reference": "Aap_uEAWZ_HpzEuhhBaiDIWOnEat0WPnUG1r0TJwpItEZdvxw0g3HSlu_LZ1P8DsPWKjDt4bOhTmZhF0NMFsMSCitqk_Wsnr1wdyTA7rM20LDUe8jEuK0CKV6AXN20m1SKXkLTq_jdZw5J-ImcGXDHekcL9vp3DYyLsirgVBQSGPz7zRptrZ",
+          "width": 1728
+        }
+      ],
+      "place_id": "ChIJu29eLTDndDERVTkhlEsbjU4",
+      "plus_code": {
+        "compound_code": "XW5W+5Q Trảng Bom District, Dong Nai",
+        "global_code": "7P28XW5W+5Q"
+      },
+      "rating": 3.4,
+      "reference": "ChIJu29eLTDndDERVTkhlEsbjU4",
+      "types": [
+        "cafe",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 8
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "202 Đ. Hùng Vương, TT. Tràng Bỏm, Trảng Bom, Đồng Nai, Vietnam",
+      "geometry": {
+        "location": {
+          "lat": 10.9561508,
+          "lng": 107.0002805
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 10.95744292989272,
+            "lng": 107.0016325298927
+          },
+          "southwest": {
+            "lat": 10.95474327010728,
+            "lng": 106.9989328701073
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/cafe-71.png",
+      "name": "Hong Kong Tea",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 3024,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/103807822486187176154\">A Google User</a>"
+          ],
+          "photo_reference": "Aap_uEAkYznJF3hubVEPdiBRG0mLpEamwww5u74xG3OekbL9XNHeTbhajFdqVqMZve4F-g0s-hQhNJ_-4DPPdrcfru38BfJjsOAgqRdbA0IBBrJZZ-Gpl1oLV6cue0L1E-mCMF5cO87a8j4mymFn3QodzHAf6VB1GIU5iNe3Vj82kUrQn-Y8",
+          "width": 4032
+        }
+      ],
+      "place_id": "ChIJB0sLnvnndDERZaXi9BG-kDQ",
+      "plus_code": {
+        "compound_code": "X242+F4 Trảng Bom District, Dong Nai",
+        "global_code": "7P29X242+F4"
+      },
+      "rating": 4.5,
+      "reference": "ChIJB0sLnvnndDERZaXi9BG-kDQ",
+      "types": [
+        "cafe",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 19
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "Unnamed Road, Hố Nai 3, Trảng Bom, Đồng Nai, Vietnam",
+      "geometry": {
+        "location": {
+          "lat": 10.956395,
+          "lng": 106.946005
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 10.95781687989272,
+            "lng": 106.9473977798927
+          },
+          "southwest": {
+            "lat": 10.95511722010728,
+            "lng": 106.9446981201073
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/cafe-71.png",
+      "name": "Cafe B52",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 4032,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/101810206900526289132\">A Google User</a>"
+          ],
+          "photo_reference": "Aap_uEADXOYj-ER_c_aVV8k0MC1-PQbEOfSLMsZF8RuYr61wCelw71ZwSFZWvZXKlH3rJDSDgJup6hmrzXpZ6b4sKMfPCVnQuvKqFnrE26Tu1bFuiw2UKMeyapXLWAEH_S3qv2g0dtu_7W3XN7A_X_deK7Gc2HyYWokuXyZgmFmkLH0ZWiJq",
+          "width": 3024
+        }
+      ],
+      "place_id": "ChIJYyszLXTndDER09wDagNQ8yo",
+      "plus_code": {
+        "compound_code": "XW4W+HC Trảng Bom District, Dong Nai",
+        "global_code": "7P28XW4W+HC"
+      },
+      "rating": 5,
+      "reference": "ChIJYyszLXTndDER09wDagNQ8yo",
+      "types": [
+        "cafe",
+        "food",
+        "point_of_interest",
+        "store",
+        "establishment"
+      ],
+      "user_ratings_total": 2
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "38 QL1A, Hố Nai 3, Trảng Bom, Đồng Nai, Vietnam",
+      "geometry": {
+        "location": {
+          "lat": 10.9617426,
+          "lng": 106.9452193
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 10.96301782989272,
+            "lng": 106.9465463298927
+          },
+          "southwest": {
+            "lat": 10.96031817010728,
+            "lng": 106.9438466701073
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/cafe-71.png",
+      "name": "Arobi Coffee Ngã 3 Trị An",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 720,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/117838827067249184925\">A Google User</a>"
+          ],
+          "photo_reference": "Aap_uEDTnKKiZpIf05CdofLQwaVDCYkr8qa_XSNau5EVOTD0cC6y8PQ8cHikANxAM2GIxK689yqIj1UmdPQZCZgYL9gPPfoP2nLPoN_td2_e7zWFm0J2D9-qol2YGLo6kFaZe9GTam4jd7Y4P6GNHoByGYc0yNY0BKQh3vbPsNr0RsOnFm93",
+          "width": 960
+        }
+      ],
+      "place_id": "ChIJb1koXyfndDERQ7N2Jf5fm8k",
+      "plus_code": {
+        "compound_code": "XW6W+M3 Trảng Bom District, Dong Nai",
+        "global_code": "7P28XW6W+M3"
+      },
+      "rating": 4.3,
+      "reference": "ChIJb1koXyfndDERQ7N2Jf5fm8k",
+      "types": [
+        "cafe",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 13
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "ĐT767, Bắc Sơn, Trảng Bom, Đồng Nai, Vietnam",
+      "geometry": {
+        "location": {
+          "lat": 10.9688709,
+          "lng": 106.9523546
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 10.97026427989272,
+            "lng": 106.9536456798927
+          },
+          "southwest": {
+            "lat": 10.96756462010728,
+            "lng": 106.9509460201073
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/cafe-71.png",
+      "name": "The Sunny Coffee",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 1808,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/109684131208710774024\">An Tran</a>"
+          ],
+          "photo_reference": "Aap_uECFNFB02CQ-cI5E_dycNU_9HeyKugW5yezg6Fa4S1h3Pjdvh7glb7N0-NCw8jOoRN0rAUX6lAg5gZbVTTXC-j8drUSzPmVqYrElNzFnCoVvLIys-EtkuP4leGVfW2-zI6gGXTZpEtrSNJwnABcrNsrH7SrY9csgPpL09e9R2yn-TmKc",
+          "width": 4000
+        }
+      ],
+      "place_id": "ChIJa8frNiLndDER6fP-ulMoryk",
+      "plus_code": {
+        "compound_code": "XX92+GW Trảng Bom District, Dong Nai",
+        "global_code": "7P28XX92+GW"
+      },
+      "price_level": 2,
+      "rating": 3.9,
+      "reference": "ChIJa8frNiLndDER6fP-ulMoryk",
+      "types": [
+        "cafe",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 29
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "99 đường 3/2, Giang Điền, Trảng Bom, Đồng Nai, Vietnam",
+      "geometry": {
+        "location": {
+          "lat": 10.9499063,
+          "lng": 107.0010986
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 10.95125612989272,
+            "lng": 107.0024829298927
+          },
+          "southwest": {
+            "lat": 10.94855647010728,
+            "lng": 106.9997832701073
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/cafe-71.png",
+      "name": "Lafika Cafe",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 2947,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/102876507410615135513\">A Google User</a>"
+          ],
+          "photo_reference": "Aap_uEAEGYVSl0-eIUd3Nno2-xes1kxv0Lc6LV5NY9M-COVnXJ1XbZgLwcOJpxdKIZ-bCXPJdAxnWZIRBcndJPWXF2L2Ojx2f4_rQywK2yA5ow19S9iol-0pdtHXJeiisUrO927IiBIrZOBb_JVzkNx2WNTZgK8AQPhN1oq4RU8ECRq8gZls",
+          "width": 2947
+        }
+      ],
+      "place_id": "ChIJzxIIGLvndDERqAkNFnKqurU",
+      "plus_code": {
+        "compound_code": "W2X2+XC Trảng Bom District, Dong Nai",
+        "global_code": "7P29W2X2+XC"
+      },
+      "rating": 4.5,
+      "reference": "ChIJzxIIGLvndDERqAkNFnKqurU",
+      "types": [
+        "cafe",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 2
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "Bắc Sơn, Trảng Bom District, Dong Nai, Vietnam",
+      "geometry": {
+        "location": {
+          "lat": 10.9435431,
+          "lng": 106.9506873
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 10.94489832989272,
+            "lng": 106.9520216298927
+          },
+          "southwest": {
+            "lat": 10.94219867010728,
+            "lng": 106.9493219701073
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/cafe-71.png",
+      "name": "Cafe Thủy Mộc Sông Mây",
+      "opening_hours": {
+        "open_now": true
+      },
+      "place_id": "ChIJpdeTeNHgdDERQaEtkqpzYsU",
+      "plus_code": {
+        "compound_code": "WXV2+C7 Trảng Bom District, Dong Nai",
+        "global_code": "7P28WXV2+C7"
+      },
+      "rating": 5,
+      "reference": "ChIJpdeTeNHgdDERQaEtkqpzYsU",
+      "types": [
+        "cafe",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 1
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "32 Ba Tháng Hai, TT. Tràng Bỏm, Trảng Bom, Đồng Nai, Vietnam",
+      "geometry": {
+        "location": {
+          "lat": 10.9497876,
+          "lng": 107.0028143
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 10.95108422989272,
+            "lng": 107.0041666798927
+          },
+          "southwest": {
+            "lat": 10.94838457010728,
+            "lng": 107.0014670201073
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/cafe-71.png",
+      "name": "Cafe Hana",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 3024,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/104081885474454556299\">Thai Pham</a>"
+          ],
+          "photo_reference": "Aap_uEAAHa8k7JzjTLYD0uqsY5M2qOrU_F8BukKoJ-SB35HFckna2rnbvG8qj88ab2LskahwXQrAfFGP6BhwaIcV_68MCra20EJYqQ5olRWoPNzXjVCsvz9cOiZSItm4ZOxkD0Zm7xIihXSJ2rn93TARYCSBZYeX_tExpERZktH4HGY9YHRa",
+          "width": 4032
+        }
+      ],
+      "place_id": "ChIJxVNyq6vmdDERuFt3JnzaZhs",
+      "plus_code": {
+        "compound_code": "W2X3+W4 Trảng Bom District, Dong Nai",
+        "global_code": "7P29W2X3+W4"
+      },
+      "price_level": 2,
+      "rating": 4,
+      "reference": "ChIJxVNyq6vmdDERuFt3JnzaZhs",
+      "types": [
+        "cafe",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 64
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "Đường Liên Xã, Ấp Thanh Hóa, Hố Nai, Trảng Bom, Đồng Nai 76000, Vietnam",
+      "geometry": {
+        "location": {
+          "lat": 10.9688179,
+          "lng": 106.9481413
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 10.97015777989272,
+            "lng": 106.9495004798927
+          },
+          "southwest": {
+            "lat": 10.96745812010728,
+            "lng": 106.9468008201073
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/cafe-71.png",
+      "name": "Napoli Coffee",
+      "opening_hours": {},
+      "photos": [
+        {
+          "height": 1211,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/110543675602118289425\">A Google User</a>"
+          ],
+          "photo_reference": "Aap_uECnfB2SZc_xsAY5DDidzIkVA2O2Ty7E_AObhjFvPRAyjwRD6gnzTl4diMF5dJB2GUXFhg73gjYQ1EdrRPEtemGsYpl1MBnhBNoFMvWAqoKi_pnPp6o9iT8A_4zoAG28iBLq22A761Lxkt5VDzwYGZUsVQKYjfWj_1XEyLSqJowhU-kk",
+          "width": 1000
+        }
+      ],
+      "place_id": "ChIJozCWecLddDERMjGPpul5lac",
+      "plus_code": {
+        "compound_code": "XW9X+G7 Trảng Bom District, Dong Nai",
+        "global_code": "7P28XW9X+G7"
+      },
+      "price_level": 1,
+      "rating": 5,
+      "reference": "ChIJozCWecLddDERMjGPpul5lac",
+      "types": [
+        "cafe",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 1
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "710 ĐT767, Bắc Sơn ĐT767, Bắc Sơn, Trảng Bom, Đồng Nai, Vietnam",
+      "geometry": {
+        "location": {
+          "lat": 10.9700502,
+          "lng": 106.9532573
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 10.97142622989272,
+            "lng": 106.9545722798927
+          },
+          "southwest": {
+            "lat": 10.96872657010728,
+            "lng": 106.9518726201073
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/cafe-71.png",
+      "name": "Cafe Ngỏ Hạnh",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 4000,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/112529734724781871460\">Hải Tặc</a>"
+          ],
+          "photo_reference": "Aap_uECtb39bQNXoTNFZ3c8N6LquusCklgRjVzrpv07av5vxngofpFh3PISwWj7qHmmUmep2hWD9pLyxmYVbrJ1Vs16h4OVWSjyBi2wu7tha-PsoXXZDePXtXNUk2uj-WXFaL8TmisiVSyf9r4IMfOTsQapo1vnKL-6Jw6W4QfxZFkSxed-A",
+          "width": 3000
+        }
+      ],
+      "place_id": "ChIJA46zLiLndDERopqDRHNl4Zs",
+      "plus_code": {
+        "compound_code": "XXC3+28 Trảng Bom District, Dong Nai",
+        "global_code": "7P28XXC3+28"
+      },
+      "price_level": 2,
+      "rating": 3.7,
+      "reference": "ChIJA46zLiLndDERopqDRHNl4Zs",
+      "types": [
+        "cafe",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 99
+    }
+  ],
+  "status": "OK"
+}
