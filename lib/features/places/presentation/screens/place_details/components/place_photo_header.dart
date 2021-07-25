@@ -1,14 +1,22 @@
-import 'dart:math';
+import 'package:cached_network_image/cached_network_image.dart';
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:google_maps_webservice/places.dart';
+import 'package:places/config/secret.dart';
 import 'package:places/values/values.dart';
-import 'package:places/features/places/domain/entities/entities.dart';
+import 'package:places/features/places/data/datasources/remote_api/models/photo_model.dart';
 
 class PlacePhotoHeader extends SliverPersistentHeaderDelegate {
   final double minExtent;
   final double maxExtent;
-  final List<PhotoEntity> photos;
+  final List<Photo> photos;
+  final String placeId;
 
-  PlacePhotoHeader({this.minExtent = 0, required this.maxExtent, required this.photos});
+  PlacePhotoHeader(
+      {this.minExtent = 0,
+      required this.maxExtent,
+      required this.photos,
+      required this.placeId});
 
   @override
   Widget build(
@@ -18,45 +26,36 @@ class PlacePhotoHeader extends SliverPersistentHeaderDelegate {
       children: [
         Hero(
           transitionOnUserGestures: true,
-          tag: photos,
-          child: Image.asset(
-            assetImages + 'cafe-placeholder.png',
-            fit: BoxFit.cover,
-          ),
+          tag: placeId,
+          child: CarouselSlider.builder(
+              itemCount: photos.length,
+              options: CarouselOptions(
+                  autoPlay: true,
+                  enlargeCenterPage: true,
+                  viewportFraction: 1,
+                  // aspectRatio: 2.0,
+                  // initialPage: controller.pictures.length ~/ 2,
+                  onPageChanged: (index, reason) {}),
+              itemBuilder: (BuildContext context, int index, int realIndex) {
+                return Stack(
+                  fit: StackFit.expand,
+                  children: [
+                    Container(
+                        child: CachedNetworkImage(
+                      imageUrl:
+                          photos[index].photoUrl + '&key=${Secret.apiKey}',
+                      fit: BoxFit.cover,
+                      placeholder: (context, url) {
+                        return Image.asset(assetImages + 'cafe-placeholder.png',
+                            fit: BoxFit.cover);
+                      },
+                    ))
+                  ],
+                );
+              }),
         ),
-        Container(
-          decoration: BoxDecoration(
-            gradient: LinearGradient(
-              colors: [Colors.transparent, Colors.black54],
-              stops: [0.5, 1.0],
-              begin: Alignment.topCenter,
-              end: Alignment.bottomCenter,
-              tileMode: TileMode.repeated,
-            ),
-          ),
-        ),
-        Positioned(
-          left: 16.0,
-          right: 16.0,
-          bottom: 16.0,
-          child: Text(
-            'Lorem ipsum',
-            style: TextStyle(
-              fontSize: 32.0,
-              color: Colors.white.withOpacity(titleOpacity(shrinkOffset)),
-            ),
-          ),
-        ),
-
       ],
     );
-  }
-
-  double titleOpacity(double shrinkOffset) {
-    // simple formula: fade out text as soon as shrinkOffset > 0
-    return 1.0 - max(0.0, shrinkOffset) / maxExtent;
-    // more complex formula: starts fading out text when shrinkOffset > minExtent
-    //return 1.0 - max(0.0, (shrinkOffset - minExtent)) / (maxExtent - minExtent);
   }
 
   @override

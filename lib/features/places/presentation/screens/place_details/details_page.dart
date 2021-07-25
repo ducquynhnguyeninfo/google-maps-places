@@ -9,9 +9,10 @@ import 'package:places/features/places/presentation/screens/place_details/bloc/p
 import 'package:places/values/app_colors.dart';
 
 class PlaceDetailScreen extends StatefulWidget {
-  final String placeId;
+  static const String name = "details_page";
+  static const String place_id = "place_id";
 
-  const PlaceDetailScreen({Key? key, required this.placeId}) : super(key: key);
+  const PlaceDetailScreen({Key? key}) : super(key: key);
 
   @override
   _PlaceDetailScreenState createState() => _PlaceDetailScreenState();
@@ -19,13 +20,29 @@ class PlaceDetailScreen extends StatefulWidget {
 
 class _PlaceDetailScreenState extends State<PlaceDetailScreen> {
   final headerHeight = 250.0;
+  late String placeId;
+
+  @override
+  void initState() {
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
+    var arguments =
+        ModalRoute.of(context)!.settings.arguments as Map<String, String>;
+    placeId = arguments[PlaceDetailScreen.place_id]!;
+
     return BlocProvider<PlaceDetailsBloc>(
-      create: (context) => PlaceDetailsBloc(sl()),
+      create: (context) => sl<PlaceDetailsBloc>(),
       child: Scaffold(
         body: _sliver(),
+        floatingActionButton: FloatingActionButton(
+          backgroundColor: Colors.white,
+          foregroundColor: Colors.black,
+          child: Icon(Icons.add),
+          onPressed: () {},
+        ),
       ),
     );
   }
@@ -45,17 +62,19 @@ class _PlaceDetailScreenState extends State<PlaceDetailScreen> {
             }
 
             if (state is PlaceDetailsLoaded) {
-              var detailsEntity = state.entity;
+              var detailsEntity = state.detail;
               return CustomScrollView(
                 slivers: [
                   SliverPersistentHeader(
                       floating: true,
                       delegate: PlacePhotoHeader(
+                          placeId: detailsEntity.placeId,
                           maxExtent: headerHeight,
-                          photos: detailsEntity.photos ?? [])),
-                  SliverFillRemaining(
-                    fillOverscroll: true,
-                    child: PlaceDetailsContent(detailsEntity),
+                          photos: detailsEntity.photos)),
+                  SliverList(
+                    delegate: SliverChildListDelegate([
+                      PlaceDetailsContent(detailsEntity),
+                    ]),
                   )
                 ],
               );
@@ -117,7 +136,6 @@ class _PlaceDetailScreenState extends State<PlaceDetailScreen> {
   }
 
   void _loadDetails(BuildContext ctx) {
-    BlocProvider.of<PlaceDetailsBloc>(ctx)
-        .add(GetPlaceDetailsEvent(widget.placeId));
+    BlocProvider.of<PlaceDetailsBloc>(ctx).add(GetPlaceDetailsEvent(placeId));
   }
 }

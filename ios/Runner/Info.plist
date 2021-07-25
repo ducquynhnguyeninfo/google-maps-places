@@ -41,5 +41,11 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>The Places app need access Location service to work properly</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>The Places app need access Location service to work properly</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>The Places app need access Location service to work properly</string>
 </dict>
 </plist>

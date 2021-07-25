@@ -13,7 +13,7 @@ import 'package:places/features/places/domain/usercases/get_google_place.dart';
 import '../../../../data/test_data.dart';
 import 'google_place_repository_impl_test.mocks.dart';
 
-@GenerateMocks([RemoteApiDataSource, LocalCacheDataSource, NetworkManager])
+// @GenerateMocks([RemoteApiDataSource, LocalCacheDataSource, NetworkManager])
 void main() {
   late GooglePlaceRepositoryImpl repositoryImpl;
   late RemoteApiDataSource mockRemoteApiDataSource;

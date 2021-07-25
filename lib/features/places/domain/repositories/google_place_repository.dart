@@ -1,17 +1,23 @@
+import 'package:google_maps_webservice/directions.dart';
+import 'package:google_maps_webservice/distance.dart' as d;
+import 'package:google_maps_webservice/places.dart';
 import 'package:multiple_result/multiple_result.dart';
 import 'package:places/core/error/failures.dart';
-import 'package:places/features/places/domain/entities/entities.dart';
-import 'package:places/features/places/domain/entities/place_details_entity.dart';
+import 'package:places/features/places/data/datasources/remote_api/models/directions.dart';
 
 abstract class GooglePlaceRepository {
-  Future<Result<Failure, List<PlaceEntity>>> getGooglePlace(PlaceType type);
+  Future<Result<Failure, List<PlacesSearchResult>>> getGooglePlace(String query);
 
-  Future<Result<Failure, PlaceDetailsEntity?>> getGooglePlaceDetails(
+  Future<Result<Failure, PlaceDetails>> getGooglePlaceDetails(
       String placeId);
 
-  Future<Result<Failure, PhotoEntity?>> getGooglePlacePhoto(
-      {required String placeId,
-      required String photoReference,
-      String? maxWith,
-      String? maxHeight});
+  Future<Result<Failure, d.Value>> getDistance({
+    required String origin,
+    required String destination,
+  });
+
+  Future<Result<Failure, Directions>> getDirection({
+    required Location origin,
+    required Location destination,
+  });
 }

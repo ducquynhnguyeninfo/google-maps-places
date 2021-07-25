@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:places/features/places/presentation/screens/places_list/home_page.dart';
+import 'package:places/features/places/presentation/routes.dart';
+import 'package:places/features/places/presentation/screens/permission_page/permission_page.dart';
+import 'package:places/values/app_colors.dart';
 
 class PlacesApp extends StatelessWidget {
   @override
@@ -7,10 +9,11 @@ class PlacesApp extends StatelessWidget {
     return MaterialApp(
       title: 'Places App',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: AppColors.backgroundColor,
       ),
       debugShowCheckedModeBanner: false,
-      home: HomePage(title: 'Whizz Places App'),
+      home: PermissionPage(),
+      onGenerateRoute: (settings) => onGenerateRoute(settings),
     );
   }
 }

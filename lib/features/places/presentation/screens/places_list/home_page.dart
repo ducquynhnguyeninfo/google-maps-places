@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:google_maps_webservice/places.dart';
 
 import 'package:places/config/dependency_injection.dart';
+import 'package:places/features/places/data/datasources/remote_api/models/place_viewmodel.dart';
 import 'package:places/values/size_config.dart';
 import 'package:places/features/places/domain/entities/entities.dart';
 import 'package:places/features/places/presentation/screens/places_list/bloc/places_list_bloc.dart';
@@ -9,9 +11,9 @@ import 'package:places/features/places/presentation/screens/places_list/componen
 import 'package:places/features/places/presentation/screens/places_list/components/list_item_view_shimmer.dart';
 
 class HomePage extends StatefulWidget {
-  HomePage({Key? key, required this.title}) : super(key: key);
+  static const String name = "home_page";
 
-  final String title;
+  HomePage({Key? key}) : super(key: key);
 
   @override
   _HomePageState createState() => _HomePageState();
@@ -27,7 +29,7 @@ class _HomePageState extends State<HomePage> {
       create: (context) => bloc,
       child: Scaffold(
         appBar: AppBar(
-          title: Text(widget.title),
+          title: Text('Whizz Places App'),
           actions: [
             BlocBuilder<PlacesListBloc, PlacesListState>(
                 builder: (context, state) => IconButton(
@@ -53,7 +55,7 @@ class _HomePageState extends State<HomePage> {
               return _buildShimmerUI();
             }
             if (state is PlacesListLoaded) {
-              List<PlaceEntity> places = state.places;
+              List<PlaceViewModel> places = state.places;
 
               return ListView.builder(
                   itemCount: places.length,

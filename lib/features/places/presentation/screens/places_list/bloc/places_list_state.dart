@@ -14,7 +14,7 @@ class PlacesListLoading extends PlacesListState {}
 class PlacesListEmpty extends PlacesListState {}
 
 class PlacesListLoaded extends PlacesListState {
-  final List<PlaceEntity> places;
+  final List<PlaceViewModel> places;
 
   PlacesListLoaded(this.places);
 

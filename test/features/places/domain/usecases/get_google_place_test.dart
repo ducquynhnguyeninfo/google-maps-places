@@ -10,7 +10,7 @@ import 'package:places/features/places/data/models/models.dart';
 import '../../../../data/test_data.dart';
 import 'get_google_place_test.mocks.dart';
 
-@GenerateMocks([GooglePlaceRepository])
+// @GenerateMocks([GooglePlaceRepository])
 void main() {
   group('fetch GooglePlace', ()
   {

@@ -14,12 +14,12 @@ class PlaceDetailsLoading extends PlaceDetailsState {}
 class PlaceDetailsEmpty extends PlaceDetailsState {}
 
 class PlaceDetailsLoaded extends PlaceDetailsState {
-  final PlaceDetailsEntity entity;
+  final PlaceDetails detail;
 
-  PlaceDetailsLoaded(this.entity);
+  PlaceDetailsLoaded(this.detail);
 
   @override
-  List<Object> get props => [entity];
+  List<Object> get props => [detail];
 }
 
 class PlaceDetailsError extends PlaceDetailsState {

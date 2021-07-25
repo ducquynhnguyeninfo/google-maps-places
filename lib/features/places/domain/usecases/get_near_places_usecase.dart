@@ -1,31 +1,33 @@
 import 'package:equatable/equatable.dart';
+import 'package:google_maps_webservice/places.dart';
 import 'package:multiple_result/multiple_result.dart';
 
 import 'package:places/core/error/failures.dart';
 import 'package:places/core/usercases/usercase.dart';
-import 'package:places/features/places/domain/entities/entities.dart';
 import 'package:places/features/places/domain/repositories/google_place_repository.dart';
 
 class GetNearPlacesUsecase
-    implements UserCase<List<PlaceEntity>, GetNearPlacesParams> {
+    implements UserCase<List<PlacesSearchResult>, GetNearPlacesParams> {
   final GooglePlaceRepository repository;
 
   GetNearPlacesUsecase(this.repository);
 
   @override
-  Future<Result<Failure, List<PlaceEntity>>> call(
-      GetNearPlacesParams? params) async {
-     var result = await repository.getGooglePlace(params!.type);
+  Future<Result<Failure, List<PlacesSearchResult>>> call(
+      GetNearPlacesParams params) async {
+
+     var result = await repository.getGooglePlace(params.query);
+     var success = result.getSuccess();
 
      return result;
   }
 }
 
 class GetNearPlacesParams extends Equatable {
-  final PlaceType type;
+  final String query;
 
-  GetNearPlacesParams({required this.type});
+  GetNearPlacesParams({required this.query});
 
   @override
-  List<Object?> get props => [type];
+  List<Object?> get props => [query];
 }

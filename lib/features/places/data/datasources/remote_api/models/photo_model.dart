@@ -1,26 +1,12 @@
-import 'package:json_annotation/json_annotation.dart';
+import 'package:google_maps_webservice/places.dart';
 
-part 'photo_model.g.dart';
 
-@JsonSerializable()
-class PhotoModel {
-  PhotoModel({
-    this.height,
-    this.htmlAttributions,
-    this.photoReference,
-    this.width,
-  });
+extension PhotoX on Photo {
+  static const thumbnailSize = 200;
 
-  int? height;
+  String get thumbnailUrl => 'https://maps.googleapis.com/maps/api/place/photo?maxwidth=$thumbnailSize&photoreference=$photoReference';
 
-  @JsonKey(name: 'html_attributions')
-  List<String>? htmlAttributions;
-
-  @JsonKey(name: 'photo_reference')
-  String? photoReference;
-  int? width;
-
-  factory PhotoModel.fromJson(Map<String, dynamic> json) => _$PhotoModelFromJson(json);
-  Map<String, dynamic> toJson() => _$PhotoModelToJson(this);
+  String get photoUrl =>
+      'https://maps.googleapis.com/maps/api/place/photo?maxwidth=$width&maxheight=$height&photoreference=$photoReference';
 
 }
