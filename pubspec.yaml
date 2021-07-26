@@ -30,7 +30,6 @@ dependencies:
   hive: any
   shimmer: ^2.0.0
   cached_network_image: ^3.1.0
-  dio: any
   get_it: ^7.2.0
   flutter_bloc: 7.0.1
   flutter_polyline_points: ^1.0.0

@@ -65,9 +65,9 @@ class _PlaceDetailsContentState extends State<PlaceDetailsContent> {
                     '',
                 icon: Icon(Icons.call_rounded, size: iconSize),
                 onTap: () {}),
-
             Divider(),
-            Checklist()
+            Checklist(placeId: widget.details.placeId),
+            SizedBox(height: 100)
           ],
         ),
     );
