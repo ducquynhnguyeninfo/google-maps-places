@@ -24,23 +24,31 @@ dependencies:
   flutter:
     sdk: flutter
 
-  cupertino_icons: ^1.0.2
+  # misc
   multiple_result: ^1.0.4
   equatable: ^2.0.3
-  hive: any
-  shimmer: ^2.0.0
-  cached_network_image: ^3.1.0
-  dio: any
   get_it: ^7.2.0
   flutter_bloc: 7.0.1
-  flutter_polyline_points: ^1.0.0
+
+  # database
+  hive: any
   path_provider: ^2.0.1
+
+  # internet
   http: ^0.13.3
 
+  # google services
+  flutter_polyline_points: ^1.0.0
   google_maps_flutter: ^2.0.6
   geolocator: ^7.2.0+1 # get current location
-  carousel_slider: ^4.0.0
   google_maps_webservice: ^0.0.20-nullsafety.5
+
+  # UI
+  cupertino_icons: ^1.0.2
+  cached_network_image: ^3.1.0
+  shimmer: ^2.0.0
+  carousel_slider: ^4.0.0
+  flutter_rating_bar: ^4.0.0
 
 dev_dependencies:
   flutter_lints: ^1.0.4 # code style

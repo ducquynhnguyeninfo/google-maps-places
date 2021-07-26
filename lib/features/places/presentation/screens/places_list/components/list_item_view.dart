@@ -1,6 +1,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:places/config/env.dart';
 import 'package:places/config/secret.dart';
 import 'package:places/features/places/data/datasources/remote_api/models/place_viewmodel.dart';
 import 'package:places/values/size_config.dart';
@@ -37,10 +38,10 @@ class ListItemView extends StatelessWidget {
                   tag: place.placeId,
                   child: ClipRRect(
                     child: (place.photoUrl == null)
-                        ? Image.asset(assetImages + 'cafe-placeholder.png')
+                        ? Image.asset(assetImages + 'cafe-placeholder.png',
+                            width: imageSize, height: imageSize)
                         : CachedNetworkImage(
-                            imageUrl: place.photoUrl +
-                                '&key=${Secret.apiKey}',
+                            imageUrl: place.photoUrl! + '&key=${Env.get('api_key')}',
                             width: imageSize,
                             height: imageSize,
                             fit: BoxFit.cover,

@@ -1,39 +1,39 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'feedback_type.dart';
+part of 'checklist_item_type.dart';
 
 // **************************************************************************
 // TypeAdapterGenerator
 // **************************************************************************
 
-class FeedbackTypeAdapter extends TypeAdapter<FeedbackType> {
+class ChecklistItemTypeAdapter extends TypeAdapter<ChecklistItemType> {
   @override
   final int typeId = 3;
 
   @override
-  FeedbackType read(BinaryReader reader) {
+  ChecklistItemType read(BinaryReader reader) {
     switch (reader.readByte()) {
       case 1:
-        return FeedbackType.checkbox;
+        return ChecklistItemType.checkbox;
       case 2:
-        return FeedbackType.rating;
+        return ChecklistItemType.rating;
       case 3:
-        return FeedbackType.photo;
+        return ChecklistItemType.photo;
       default:
-        return FeedbackType.checkbox;
+        return ChecklistItemType.checkbox;
     }
   }
 
   @override
-  void write(BinaryWriter writer, FeedbackType obj) {
+  void write(BinaryWriter writer, ChecklistItemType obj) {
     switch (obj) {
-      case FeedbackType.checkbox:
+      case ChecklistItemType.checkbox:
         writer.writeByte(1);
         break;
-      case FeedbackType.rating:
+      case ChecklistItemType.rating:
         writer.writeByte(2);
         break;
-      case FeedbackType.photo:
+      case ChecklistItemType.photo:
         writer.writeByte(3);
         break;
     }
@@ -45,7 +45,7 @@ class FeedbackTypeAdapter extends TypeAdapter<FeedbackType> {
   @override
   bool operator ==(Object other) =>
       identical(this, other) ||
-      other is FeedbackTypeAdapter &&
+      other is ChecklistItemTypeAdapter &&
           runtimeType == other.runtimeType &&
           typeId == other.typeId;
 }

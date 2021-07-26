@@ -21,7 +21,8 @@ class PlacesListBloc extends Bloc<PlacesListEvent, PlacesListState> {
   final GetNearPlacesUsecase getNearPlaces;
   final GetDistanceUsecase getDistanceUsecase;
 
-  PlacesListBloc({required this.getNearPlaces, required this.getDistanceUsecase})
+  PlacesListBloc(
+      {required this.getNearPlaces, required this.getDistanceUsecase})
       : super(PlacesListInitial());
 
   @override
@@ -34,36 +35,41 @@ class PlacesListBloc extends Bloc<PlacesListEvent, PlacesListState> {
   }
 
   Stream<PlacesListState> _getNearPlaces(GetNearPlacesEvent event) async* {
-
     yield PlacesListLoading();
 
-    var result = await getNearPlaces.call(GetNearPlacesParams(query: event.placeType));
+    var result =
+        await getNearPlaces.call(GetNearPlacesParams(query: event.placeType));
 
     yield* result.when((Failure error) async* {
-      yield PlacesListError(message: error.runtimeType.toString());
+      yield PlacesListError(message: error.properties.toString());
     }, (List<PlacesSearchResult> success) async* {
       List<PlaceViewModel> searchResult = [];
 
       print("result size: ${result.getSuccess()!.length}");
       for (int i = 0; i < success.length; i++) {
-       var place = success[i];
+        var place = success[i];
 
         var origin = sl<LocationHelper>().position;
         var dest = place.geometry!.location;
-
-        // get distance between locations
-        var result = await getDistanceUsecase.call(
-            GetDistanceParams(origin: origin.toLocation(), destination: dest));
-
+        var result;
+        try {
+          // get distance between locations
+          result = await getDistanceUsecase.call(GetDistanceParams(
+              origin: origin.toLocation(), destination: dest));
+        } catch (e) {}
         Value distance;
-        if (result.isSuccess()) {
+        if (result != null) {
           distance = result.getSuccess()!;
         } else {
           distance = Value(value: 0, text: 'unknown');
         }
 
-        searchResult.add(PlaceViewModel(place.placeId, place.name,
-            place.formattedAddress!, place.photos[0].photoUrl, distance));
+        searchResult.add(PlaceViewModel(
+            place.placeId,
+            place.name,
+            place.formattedAddress!,
+            place.photos.isNotEmpty ? place.photos[0].photoUrl : null,
+            distance));
       }
 
       searchResult.sort((a, b) {

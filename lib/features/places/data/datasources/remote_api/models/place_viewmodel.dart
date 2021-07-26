@@ -4,7 +4,7 @@ class PlaceViewModel {
   final String placeId;
   final String name;
   final String address;
-  final String photoUrl;
+  final String? photoUrl;
   final Value distance;
 
   PlaceViewModel(

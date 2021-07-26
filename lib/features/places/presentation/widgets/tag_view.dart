@@ -12,10 +12,8 @@ class TagView extends StatelessWidget {
     return TextButton(
       onPressed: onTap,
       style: TextButton.styleFrom(
-          backgroundColor: AppColors.backgroundColor,
-          shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(20),
-              side: BorderSide(color: AppColors.lightGrey))),
+          backgroundColor: AppColors.mainColor,
+          shape: StadiumBorder()),
       child: Text(
         text,
         style: Theme.of(context)

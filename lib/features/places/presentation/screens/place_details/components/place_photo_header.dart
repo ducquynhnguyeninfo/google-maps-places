@@ -2,6 +2,7 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:google_maps_webservice/places.dart';
+import 'package:places/config/env.dart';
 import 'package:places/config/secret.dart';
 import 'package:places/values/values.dart';
 import 'package:places/features/places/data/datasources/remote_api/models/photo_model.dart';
@@ -43,7 +44,7 @@ class PlacePhotoHeader extends SliverPersistentHeaderDelegate {
                     Container(
                         child: CachedNetworkImage(
                       imageUrl:
-                          photos[index].photoUrl + '&key=${Secret.apiKey}',
+                          photos[index].photoUrl + '&key=${Env.get('api_key')}',
                       fit: BoxFit.cover,
                       placeholder: (context, url) {
                         return Image.asset(assetImages + 'cafe-placeholder.png',

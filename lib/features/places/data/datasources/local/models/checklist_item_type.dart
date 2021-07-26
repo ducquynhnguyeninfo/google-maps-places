@@ -1,10 +1,11 @@
 import 'package:hive/hive.dart';
 
-part 'feedback_type.g.dart';
+part 'checklist_item_type.g.dart';
 
-const String feedbackTypeHiveBoxName = 'FeedbackType';
+const String checklistItemTypeHiveBoxName = 'checklist_item_type';
+
 @HiveType(typeId: 3)
-enum FeedbackType {
+enum ChecklistItemType {
 
 @HiveField(1)
   checkbox,
