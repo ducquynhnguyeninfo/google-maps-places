@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:places/features/places/presentation/modals/checkmark_modal.dart';
+import 'package:places/features/places/presentation/modals/rating_modal.dart';
 import 'package:places/features/places/presentation/screens/place_details/components/checklist/bloc/checklist_bloc.dart';
 import 'package:places/features/places/presentation/widgets/fab_menu.dart';
 import 'package:places/values/values.dart';
@@ -193,10 +194,14 @@ class _PlaceDetailScreenState extends State<PlaceDetailScreen>
   }
 
   void _showRatingModal() {
-    showModalBottomSheet(
-      context: context,
+    scaffoldState.currentState!.showBottomSheet(
+          (context) => RatingModal(placeId: placeId),
       backgroundColor: Colors.transparent,
-      builder: (context) => Text("rating"),
     );
+    // showModalBottomSheet(
+    //   context: context,
+    //   backgroundColor: Colors.transparent,
+    //   builder: (context) => RatingModal(placeId: placeId),
+    // );
   }
 }

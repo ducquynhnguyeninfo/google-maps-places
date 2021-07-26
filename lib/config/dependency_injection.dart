@@ -19,6 +19,7 @@ import 'package:places/features/places/domain/usecases/get_place_detail_usecase.
 import 'package:places/features/places/presentation/screens/direction_map/bloc/direction_map_bloc.dart';
 import 'package:places/features/places/presentation/screens/place_details/bloc/place_details_bloc.dart';
 import 'package:places/features/places/presentation/screens/place_details/components/checklist/bloc/checklist_bloc.dart';
+import 'package:places/features/places/presentation/screens/place_details/components/checklist/widgets/widget_factory.dart';
 import 'package:places/features/places/presentation/screens/places_list/bloc/places_list_bloc.dart';
 import 'package:http/http.dart' as http;
 import 'package:places/utils/location_helper.dart';
@@ -82,17 +83,14 @@ Future<void> setupDi() async {
   sl.registerLazySingleton<SaveChecklistUsecase>(
       () => SaveChecklistUsecase(sl()));
 
-  // sl.registerSingletonWithDependencies<GetChecklistUsecase>(
-  //     () => GetChecklistUsecase(sl()),
-  //     dependsOn: [LocalDataSource], signalsReady: true);
-  // sl.registerSingletonWithDependencies<SaveChecklistUsecase>(
-  //     () => SaveChecklistUsecase(sl()),
-  //     dependsOn: [LocalDataSource], signalsReady: true);
-
   // bloc
   sl.registerFactory<PlacesListBloc>(
       () => PlacesListBloc(getNearPlaces: sl(), getDistanceUsecase: sl()));
   sl.registerFactory<PlaceDetailsBloc>(() => PlaceDetailsBloc(sl()));
   sl.registerFactory<DirectionMapBloc>(() => DirectionMapBloc(sl()));
   sl.registerFactory<ChecklistBloc>(() => ChecklistBloc(sl(), sl()));
+
+  // utility
+  sl.registerLazySingleton<ChecklistWidgetFactory>(() => ChecklistWidgetFactory());
+
 }
