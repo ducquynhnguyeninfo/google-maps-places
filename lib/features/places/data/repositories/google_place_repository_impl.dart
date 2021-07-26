@@ -5,7 +5,6 @@ import 'package:google_maps_webservice/places.dart';
 import 'package:multiple_result/multiple_result.dart';
 import 'package:places/core/error/exceptions.dart';
 import 'package:places/core/error/failures.dart';
-import 'package:places/core/network/network_manager.dart';
 import 'package:places/features/places/data/datasources/local/local_datasource.dart';
 import 'package:places/features/places/data/datasources/remote_api/google_maps_webservice_datasource.dart';
 import 'package:places/features/places/data/datasources/remote_api/models/directions.dart';
@@ -15,38 +14,33 @@ import 'package:places/features/places/domain/repositories/google_place_reposito
 class GooglePlaceRepositoryImpl implements GooglePlaceRepository {
   final LocalCacheDataSource localCacheDataSource;
   final GoogleMapsWebserviceDatasource googleMapsWebserviceDatasource;
-  final NetworkManager networkManager;
 
   GooglePlaceRepositoryImpl(
       {required this.googleMapsWebserviceDatasource,
-      required this.localCacheDataSource,
-      required this.networkManager});
+      required this.localCacheDataSource
+      });
 
   @override
   Future<Result<Failure, List<PlacesSearchResult>>> getGooglePlace(
       String type) async {
-    if (networkManager.isConnected) {
-      var response = await googleMapsWebserviceDatasource.getGooglePlace(type);
-      if (response.status != 'OK') {
-        return Error(ServerFailure(properties: [response.errorMessage]));
-      }
-      return Success(response.results);
+
+    var response = await googleMapsWebserviceDatasource.getGooglePlace(type);
+    if (response.status != 'OK') {
+      return Error(ServerFailure(properties: [response.errorMessage]));
     }
-    return Error(ServerFailure());
+    return Success(response.results);
+
   }
 
   @override
   Future<Result<Failure, PlaceDetails>> getGooglePlaceDetails(
       String placeId) async {
-    if (networkManager.isConnected) {
 
-      var response = await googleMapsWebserviceDatasource.getGooglePlaceDetails(placeId);
-      if (response.status != 'OK') {
-        return Error(ServerFailure(properties: [response.errorMessage]));
-      }
-      return Success(response.result);
+    var response = await googleMapsWebserviceDatasource.getGooglePlaceDetails(placeId);
+    if (response.status != 'OK') {
+      return Error(ServerFailure(properties: [response.errorMessage]));
     }
-    return Error(ServerFailure());
+    return Success(response.result);
   }
 
   @override

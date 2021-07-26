@@ -29,16 +29,15 @@ class PlacesListBloc extends Bloc<PlacesListEvent, PlacesListState> {
     PlacesListEvent event,
   ) async* {
     if (event is GetNearPlacesEvent) {
-      yield* _getNearPlaces();
+      yield* _getNearPlaces(event);
     }
   }
 
-  Stream<PlacesListState> _getNearPlaces() async* {
-    var q = 'cafe';
+  Stream<PlacesListState> _getNearPlaces(GetNearPlacesEvent event) async* {
 
     yield PlacesListLoading();
 
-    var result = await getNearPlaces.call(GetNearPlacesParams(query: q));
+    var result = await getNearPlaces.call(GetNearPlacesParams(query: event.placeType));
 
     yield* result.when((Failure error) async* {
       yield PlacesListError(message: error.runtimeType.toString());

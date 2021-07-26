@@ -6,8 +6,6 @@ import 'package:google_maps_webservice/directions.dart';
 import 'package:google_maps_webservice/distance.dart';
 import 'package:places/features/places/data/datasources/remote_api/models/directions.dart';
 import 'package:places/features/places/domain/usecases/get_direction_usecase.dart';
-import 'package:places/features/places/domain/usecases/get_distance_usecase.dart';
-import 'package:places/utils/location_helper.dart';
 
 part 'direction_map_event.dart';
 part 'direction_map_state.dart';
