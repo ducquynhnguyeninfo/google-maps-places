@@ -37,6 +37,8 @@ class PlacesListBloc extends Bloc<PlacesListEvent, PlacesListState> {
   Stream<PlacesListState> _getNearPlaces(GetNearPlacesEvent event) async* {
     yield PlacesListLoading();
 
+    await sl<LocationHelper>().myPosition(requestNew: true);
+
     var result =
         await getNearPlaces.call(GetNearPlacesParams(query: event.placeType));
 
@@ -50,19 +52,22 @@ class PlacesListBloc extends Bloc<PlacesListEvent, PlacesListState> {
         var place = success[i];
 
         var origin = sl<LocationHelper>().position;
-        var dest = place.geometry!.location;
-        var result;
-        try {
-          // get distance between locations
-          result = await getDistanceUsecase.call(GetDistanceParams(
-              origin: origin.toLocation(), destination: dest));
-        } catch (e) {}
+
+          var dest = place.geometry!.location;
+          var result;
+          try {
+            // get distance between locations
+            result = await getDistanceUsecase.call(GetDistanceParams(
+                origin: origin.toLocation(), destination: dest));
+          } catch (e) {}
+
         Value distance;
         if (result != null) {
           distance = result.getSuccess()!;
         } else {
           distance = Value(value: 0, text: 'unknown');
         }
+
 
         searchResult.add(PlaceViewModel(
             place.placeId,

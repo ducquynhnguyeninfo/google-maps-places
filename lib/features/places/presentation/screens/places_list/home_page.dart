@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'package:places/config/dependency_injection.dart';
 import 'package:places/features/places/data/datasources/remote_api/models/place_viewmodel.dart';
+import 'package:places/utils/location_helper.dart';
 import 'package:places/values/size_config.dart';
 import 'package:places/features/places/presentation/screens/places_list/bloc/places_list_bloc.dart';
 import 'package:places/features/places/presentation/screens/places_list/components/list_item_view.dart';
@@ -31,7 +32,7 @@ class _HomePageState extends State<HomePage> {
           actions: [
             BlocBuilder<PlacesListBloc, PlacesListState>(
                 builder: (context, state) => IconButton(
-                      onPressed: () {
+                      onPressed: () async {
                         _loadCafes(context);
                       },
                       icon: Icon(Icons.refresh_rounded),
