@@ -11,12 +11,12 @@ class GetDistanceUsecase implements UserCase<Value?, GetDistanceParams> {
   GetDistanceUsecase(this.repository);
 
   @override
-  Future<Result<Failure, Value>> call(GetDistanceParams params) async {
-
+  Future<Result<Value, Failure>> call(GetDistanceParams params) async {
     var result = await repository.getDistance(
-        origin: params.origin.toString(), destination: params.destination.toString());
+        origin: params.origin.toString(),
+        destination: params.destination.toString());
 
-    return result;
+    return Result.success(result.getOrThrow());
   }
 }
 

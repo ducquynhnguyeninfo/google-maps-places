@@ -12,7 +12,7 @@ class GetPlaceDetailsUsecase
   GetPlaceDetailsUsecase(this.repository);
 
   @override
-  Future<Result<Failure, PlaceDetails>> call(
+  Future<Result<PlaceDetails, Failure>> call(
       GetPlaceDetailParams? params) async {
     var result = await repository.getGooglePlaceDetails(params!.placeId);
 

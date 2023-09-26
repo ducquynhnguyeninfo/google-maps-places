@@ -13,13 +13,12 @@ class GetNearPlacesUsecase
   GetNearPlacesUsecase(this.repository);
 
   @override
-  Future<Result<Failure, List<PlacesSearchResult>>> call(
+  Future<Result<List<PlacesSearchResult>, Failure>> call(
       GetNearPlacesParams params) async {
+    var result = await repository.getGooglePlace(params.query);
+    var success = result.tryGetSuccess();
 
-     var result = await repository.getGooglePlace(params.query);
-     var success = result.getSuccess();
-
-     return result;
+    return result;
   }
 }
 

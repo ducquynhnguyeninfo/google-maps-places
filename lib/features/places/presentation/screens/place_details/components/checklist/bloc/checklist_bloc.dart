@@ -34,9 +34,7 @@ class ChecklistBloc extends Bloc<ChecklistEvent, ChecklistState> {
       yield* _savePlaceChecklist(event);
     }
 
-    if (event is RemoveChecklistItemEvent) {
-
-    }
+    if (event is RemoveChecklistItemEvent) {}
   }
 
   Stream<ChecklistState> _getPlaceChecklist(GetChecklistEvent event) async* {
@@ -44,25 +42,28 @@ class ChecklistBloc extends Bloc<ChecklistEvent, ChecklistState> {
 
     var result = await getChecklistUsecase.call(event.placeId);
 
-    yield* result.when((error) async* {
-      yield ChecklistError(error.runtimeType.toString());
-    }, (PlaceDetailChecklist success) async* {
+    yield* result.when((PlaceDetailChecklist success) async* {
       checklist = success; // caching
       yield ChecklistLoaded(success);
+    }, (error) async* {
+      yield ChecklistError(error.runtimeType.toString());
     });
   }
 
-  Stream<ChecklistState> _savePlaceChecklist(AddNewChecklistItemEvent event) async* {
+  Stream<ChecklistState> _savePlaceChecklist(
+      AddNewChecklistItemEvent event) async* {
     yield ChecklistLoading();
     await saveChecklistUsecase.call(event.checklist);
     var result = await getChecklistUsecase.call(event.checklist.placeId);
 
-    yield* result.when((error) async* {
-      yield ChecklistError(error.runtimeType.toString());
-    }, (PlaceDetailChecklist success) async* {
-      checklist = success;
-      yield ChecklistLoaded(success);
-    });
-
+    yield* result.when(
+      (PlaceDetailChecklist success) async* {
+        checklist = success;
+        yield ChecklistLoaded(success);
+      },
+      (error) async* {
+        yield ChecklistError(error.runtimeType.toString());
+      },
+    );
   }
 }

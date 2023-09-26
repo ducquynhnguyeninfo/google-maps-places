@@ -9,16 +9,17 @@ class LocalDataRepositoryImpl implements LocalDataRepository {
 
   LocalDataRepositoryImpl(this.localCacheDataSource);
 
-  Future<Result<Failure, PlaceDetailChecklist>> loadCheckList(
+  @override
+  Future<Result<PlaceDetailChecklist, Failure>> loadCheckList(
       String placeId) async {
     var checklist = await localCacheDataSource.getPlaceChecklist(placeId);
-    if (checklist == null)
-      return Error(CacheFailure());
+    if (checklist == null) return const Result.error(CacheFailure());
 
     return Success(checklist);
   }
 
-  Future<Result<Failure, PlaceDetailChecklist>> saveCheckList(
+  @override
+  Future<Result<PlaceDetailChecklist, Failure>> saveCheckList(
       PlaceDetailChecklist checklist) async {
     return Success(await localCacheDataSource.savePlaceChecklist(checklist));
   }

@@ -10,33 +10,30 @@ import 'package:places/features/places/data/datasources/remote_api/google_maps_w
 import 'package:places/features/places/data/datasources/remote_api/models/directions.dart';
 import 'package:places/features/places/domain/repositories/google_place_repository.dart';
 
-
 class GooglePlaceRepositoryImpl implements GooglePlaceRepository {
   // final LocalDataSource localCacheDataSource;
   final GoogleMapsWebserviceDatasource googleMapsWebserviceDatasource;
 
-  GooglePlaceRepositoryImpl(
-      {required this.googleMapsWebserviceDatasource,
-      // required this.localCacheDataSource
-      });
+  GooglePlaceRepositoryImpl({
+    required this.googleMapsWebserviceDatasource,
+    // required this.localCacheDataSource
+  });
 
   @override
-  Future<Result<Failure, List<PlacesSearchResult>>> getGooglePlace(
+  Future<Result<List<PlacesSearchResult>, Failure>> getGooglePlace(
       String type) async {
-
     var response = await googleMapsWebserviceDatasource.getGooglePlace(type);
     if (response.status != 'OK') {
       return Error(ServerFailure(properties: [response.errorMessage]));
     }
     return Success(response.results);
-
   }
 
   @override
-  Future<Result<Failure, PlaceDetails>> getGooglePlaceDetails(
+  Future<Result<PlaceDetails, Failure>> getGooglePlaceDetails(
       String placeId) async {
-
-    var response = await googleMapsWebserviceDatasource.getGooglePlaceDetails(placeId);
+    var response =
+        await googleMapsWebserviceDatasource.getGooglePlaceDetails(placeId);
     if (response.status != 'OK') {
       return Error(ServerFailure(properties: [response.errorMessage]));
     }
@@ -44,7 +41,7 @@ class GooglePlaceRepositoryImpl implements GooglePlaceRepository {
   }
 
   @override
-  Future<Result<Failure, distance.Value>> getDistance(
+  Future<Result<distance.Value, Failure>> getDistance(
       {required String origin, required String destination}) async {
     try {
       var response = await googleMapsWebserviceDatasource.getDistance(
@@ -55,18 +52,19 @@ class GooglePlaceRepositoryImpl implements GooglePlaceRepository {
       }
 
       var rows = response.rows;
-      if (rows.isEmpty || response.rows[0].elements.isEmpty)  {
-        return Error(ServerFailure(properties: []));
+      if (rows.isEmpty || response.rows[0].elements.isEmpty) {
+        return Result.error(
+            ServerFailure(properties: [Exception("data is empty")]));
       }
 
       return Success(rows[0].elements[0].distance);
     } on ServerException catch (e) {
-      return Error(ServerFailure());
+      return Result.error(ServerFailure(properties: [e]));
     }
   }
 
   @override
-  Future<Result<Failure, Directions>> getDirection(
+  Future<Result<Directions, Failure>> getDirection(
       {required Location origin, required Location destination}) async {
     try {
       var response = await googleMapsWebserviceDatasource.getDirections(
@@ -76,7 +74,7 @@ class GooglePlaceRepositoryImpl implements GooglePlaceRepository {
       }
       return Success(Directions.fromResponse(response));
     } on ServerException catch (e) {
-      return Error(ServerFailure());
+      return Error(ServerFailure(properties: [e]));
     }
   }
 }

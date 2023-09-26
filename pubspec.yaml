@@ -15,32 +15,32 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 # In iOS, build-name is used as CFBundleShortVersionString while build-number used as CFBundleVersion.
 # Read more about iOS versioning at
 # https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
-version: 1.0.0+1
+version: 1.2.0+2
 
 environment:
-  sdk: ">=2.12.0 <3.0.0"
+  sdk: ">=3.0.5 <4.0.0"
 
 dependencies:
   flutter:
     sdk: flutter
 
   # misc
-  multiple_result: ^1.0.4
-  equatable: ^2.0.3
-  get_it: ^7.2.0
+  multiple_result: ^5.1.0
+  equatable: ^2.0.5
+  get_it: ^7.6.4
   flutter_bloc: 7.0.1
 
   # database
-  hive: any
-  path_provider: ^2.0.1
+  hive: ^2.2.3
+  path_provider: ^2.1.1
 
   # internet
-  http: ^0.13.3
+  http: ^0.13.0
 
   # google services
   flutter_polyline_points: ^1.0.0
-  google_maps_flutter: ^2.0.6
-  geolocator: ^7.2.0+1 # get current location
+  google_maps_flutter: ^2.5.0
+  geolocator: ^10.1.0 # get current location
   google_maps_webservice: ^0.0.20-nullsafety.5
 
   # UI
@@ -51,8 +51,8 @@ dependencies:
   flutter_rating_bar: ^4.0.0
 
 dev_dependencies:
-  flutter_lints: ^1.0.4 # code style
-  json_serializable: 4.1.2 # model boilplate generation
+  flutter_lints: ^2.0.3 # code style
+  json_serializable: ^6.7.1 # model boilplate generation
   build_runner: any # flutter pub run build_runner build
   mockito: any # testing
   hive_generator: any

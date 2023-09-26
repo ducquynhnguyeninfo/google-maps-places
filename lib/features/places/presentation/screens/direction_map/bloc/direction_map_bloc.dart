@@ -19,23 +19,22 @@ class DirectionMapBloc extends Bloc<DirectionMapEvent, DirectionMapState> {
   Stream<DirectionMapState> mapEventToState(
     DirectionMapEvent event,
   ) async* {
-
     if (event is GetDirectionEvent) {
       yield* getDirections(event.origin, event.destination);
     }
   }
 
+  Stream<DirectionMapState> getDirections(
+      Location origin, Location destination) async* {
+    yield DirectionMapLoading();
 
-Stream<DirectionMapState> getDirections(Location origin, Location destination) async* {
-  yield DirectionMapLoading();
+    var result = await directionUsercase
+        .call(GetDirectionsParams(origin: origin, destination: destination));
 
-  var result = await directionUsercase.call(GetDirectionsParams(origin: origin, destination: destination));
-
-  yield* result.when((error) async* {
-    yield  DirectionMapError(message: error.runtimeType.toString());
-  }, (Directions success) async* {
-
-    yield  DirectionMapLoaded(success);
-  });
-}
+    yield* result.when((Directions directions) async* {
+      yield DirectionMapLoaded(directions);
+    }, (error) async* {
+      yield DirectionMapError(message: error.runtimeType.toString());
+    });
+  }
 }

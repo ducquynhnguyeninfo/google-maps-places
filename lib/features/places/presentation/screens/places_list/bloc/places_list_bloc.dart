@@ -14,7 +14,6 @@ import 'package:places/utils/location_helper.dart';
 import 'package:places/features/places/data/datasources/remote_api/models/photo_model.dart';
 
 part 'places_list_event.dart';
-
 part 'places_list_state.dart';
 
 class PlacesListBloc extends Bloc<PlacesListEvent, PlacesListState> {
@@ -42,24 +41,22 @@ class PlacesListBloc extends Bloc<PlacesListEvent, PlacesListState> {
     var result =
         await getNearPlaces.call(GetNearPlacesParams(query: event.placeType));
 
-    yield* result.when((Failure error) async* {
-      yield PlacesListError(message: error.properties.toString());
-    }, (List<PlacesSearchResult> success) async* {
+    yield* result.when((List<PlacesSearchResult> success) async* {
       List<PlaceViewModel> searchResult = [];
 
-      print("result size: ${result.getSuccess()!.length}");
+      print("result size: ${result.tryGetSuccess()?.length}");
       for (int i = 0; i < success.length; i++) {
         var place = success[i];
 
         var origin = sl<LocationHelper>().position;
 
-          var dest = place.geometry!.location;
-          var result;
-          try {
-            // get distance between locations
-            result = await getDistanceUsecase.call(GetDistanceParams(
-                origin: origin.toLocation(), destination: dest));
-          } catch (e) {}
+        var dest = place.geometry!.location;
+        var result;
+        try {
+          // get distance between locations
+          result = await getDistanceUsecase.call(GetDistanceParams(
+              origin: origin.toLocation(), destination: dest));
+        } catch (e) {}
 
         Value distance;
         if (result != null) {
@@ -67,7 +64,6 @@ class PlacesListBloc extends Bloc<PlacesListEvent, PlacesListState> {
         } else {
           distance = Value(value: 0, text: 'unknown');
         }
-
 
         searchResult.add(PlaceViewModel(
             place.placeId,
@@ -82,6 +78,8 @@ class PlacesListBloc extends Bloc<PlacesListEvent, PlacesListState> {
       });
 
       yield PlacesListLoaded(searchResult);
+    }, (Failure error) async* {
+      yield PlacesListError(message: error.properties.toString());
     });
   }
 }

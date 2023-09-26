@@ -11,16 +11,12 @@ class GetChecklistUsecase implements UserCase<PlaceDetailChecklist, String> {
   GetChecklistUsecase(this._localDataRepository);
 
   @override
-  Future<Result<Failure, PlaceDetailChecklist>> call(String params) async {
-
+  Future<Result<PlaceDetailChecklist, Failure>> call(String params) async {
     try {
       var checkList = await _localDataRepository.loadCheckList(params);
-      return checkList;
-
+      return Result.success(checkList.getOrThrow());
     } on CacheException catch (e) {
-
-      return Error(CacheFailure(properties: [e]));
+      return Result.error(CacheFailure(properties: [e]));
     }
-
   }
 }

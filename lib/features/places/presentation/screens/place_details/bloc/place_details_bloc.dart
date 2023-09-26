@@ -29,10 +29,13 @@ class PlaceDetailsBloc extends Bloc<PlaceDetailsEvent, PlaceDetailsState> {
     var result = await getPlaceDetailsUsecase
         .call(GetPlaceDetailParams(placeId: placeId));
 
-    yield* result.when((error) async* {
-      yield PlaceDetailsError(message: error.runtimeType.toString());
-    }, (PlaceDetails success) async* {
-      yield PlaceDetailsLoaded(success);
-    });
+    yield* result.when(
+      (PlaceDetails success) async* {
+        yield PlaceDetailsLoaded(success);
+      },
+      (error) async* {
+        yield PlaceDetailsError(message: error.runtimeType.toString());
+      },
+    );
   }
 }

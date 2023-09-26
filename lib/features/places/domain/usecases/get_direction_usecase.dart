@@ -14,8 +14,7 @@ class GetDirectionsUsecase
   GetDirectionsUsecase(this.repository);
 
   @override
-  Future<Result<Failure, Directions>> call(
-      GetDirectionsParams params) async {
+  Future<Result<Directions, Failure>> call(GetDirectionsParams params) async {
     var result = await repository.getDirection(
         origin: params.origin, destination: params.destination);
 
